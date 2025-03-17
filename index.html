@@ -32,6 +32,7 @@
   </head>
 
   <body>
+    <!-- Header -->
     <header class="page-header">
       <div class="container page-header-boxing">
         <nav class="nav">
@@ -67,14 +68,18 @@
         </address>
       </div>
     </header>
+    <!-- Main -->
     <main class="page-main">
+      <!-- Square -->
       <section class="hero">
         <div class="container">
           <h1 class="main-title">
             Effective Solutions<br />
             for Your Business
           </h1>
-          <button type="button" class="hero-button">Order Service</button>
+          <button type="button" class="hero-button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <section class="small-descr-section section">
@@ -132,6 +137,7 @@
           </ul>
         </div>
       </section>
+      <!-- Our Team -->
       <section class="our-team">
         <div class="container">
           <h2 class="secondary-title">Our Team</h2>
@@ -215,11 +221,7 @@
               </div>
             </li>
             <li class="our-team-list-item">
-              <img
-                src="./images/camila_garcia.jpg"
-                width="264"
-                alt="Camila Garcia"
-              />
+              <img src="./images/camila_garcia.jpg" width="264" alt="Camila Garcia" />
               <div class="name-position">
                 <h3 class="small-title">Camila Garcia</h3>
                 <p class="small-descr">Marketing</p>
@@ -302,6 +304,7 @@
       <section class="our-portfolio-container">
         <div class="container">
           <h2 class="secondary-title">Our Portfolio</h2>
+          <!-- Images -->
           <ul class="list portfolio-box">
             <li class="portfolio-item">
               <div class="portfolio-img-wrapper">
@@ -431,6 +434,7 @@
         </div>
       </section>
     </main>
+    <!-- Footer -->
     <footer class="page-footer section">
       <div class="container webstudio-container">
         <div class="websudio">
@@ -443,7 +447,7 @@
           </p>
         </div>
         <div class="links">
-          <p class="footer-header">Social media</p>
+          <p>Social media</p>
           <ul class="footer-links">
             <li class="footer-link-item list">
               <a class="our-team-link" href=""
@@ -455,24 +459,136 @@
             <li class="footer-link-item list">
               <a class="our-team-link" href=""
                 ><svg class="our-team-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-twitter"></use></svg
-              ></a>
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
             <li class="footer-link-item list">
               <a class="our-team-link" href=""
                 ><svg class="our-team-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-facebook"></use></svg
-              ></a>
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
             <li class="footer-link-item list">
               <a class="our-team-link" href=""
                 ><svg class="our-team-soc-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-linkedin"></use></svg
-              ></a>
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
+        <div class="footer-form">
+          <p class="footer-header">Subscribe</p>
+          <form class="input-button-footer">
+            <label class="footer-label" for="footer-input">
+              <input
+                id="footer-input"
+                class="footer-input"
+                name="user-email"
+                type="email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button type="submit" class="footer-button">
+              Subscribe
+              <svg class="footer-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <div data-modal class="backdrop is-open">
+      <div class="backdrop-info-wrapper">
+        <button data-modal-close type="button" class="data-model-close-button">
+          <svg class="cross-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="form">
+          <div class="form-container">
+            <label class="modal-label" for="user-name">Name</label>
+            <div class="icon-and-input">
+              <input
+                id="user-name"
+                class="modal-input"
+                name="user-name"
+                type="text"
+                placeholder=""
+                required
+              /><svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-container">
+            <label class="modal-label" for="user-phone">Phone</label>
+            <div class="icon-and-input">
+              <input
+                id="user-phone"
+                class="modal-input"
+                name="user-phone"
+                type="text"
+                placeholder=""
+                required
+              /><svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-container">
+            <label class="modal-label" for="user-email">Email</label>
+            <div class="icon-and-input">
+              <input
+                id="user-email"
+                class="modal-input"
+                name="user-email"
+                type="text"
+                placeholder=""
+                required
+              /><svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-container comment-container">
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea
+              id="user-comment"
+              name="user-comment"
+              class="modal-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              class="checkbox visually-hidden"
+              id="user-privacy"
+              value="true"
+              name="user-privacy"
+              required
+            />
+            <label class="checkbox-label" for="user-privacy">
+              <span class="checkbox-icon-container">
+                <svg class="bird-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-bird"></use>
+                </svg> </span
+              >I accept the terms and conditions of the
+              <a class="modal-privacy-link link" href=""
+                >Privacy Policy</a
+              ></label
+            >
+          </div>
+          <button type="submit" class="hero-button modal-button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
